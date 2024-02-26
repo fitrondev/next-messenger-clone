@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
+import { useForm, SubmitHandler, FieldValues, set } from "react-hook-form";
 
 // components
 import Input from "../Input";
@@ -49,6 +49,7 @@ const AuthForm = () => {
     }
 
     console.log(data);
+    setIsLoading(false);
   };
 
   const socialAction = (action: string) => {
